@@ -20,11 +20,21 @@ let handleMouseMove = function (event) {
     input.mouseX.current = event.clientX;
     input.mouseX.fraction = (input.mouseX.current - input.mouseX.start) / input.mouseX.range;
     //Test to check Fraction Values
-    console.log('X Fraction:', input.mouseX.fraction)
+
 
     input.mouseY.current = event.clientY;
     input.mouseY.fraction = (input.mouseY.current - input.mouseY.start) / input.mouseY.range;
+
+    //Statement to turnOFF values OFF the range:
+    // if (input.mouseX.fraction > 1) {
+    //     input.mouseX.fraction = 1;
+    // };
+    // if (input.mouseX.fraction < 0) {
+    //     input.mouseX.fraction = 0;
+    // };
+
     //Test to check Fraction Values
+    console.log('X Fraction:', input.mouseX.fraction)
     console.log('Y Fraction:', input.mouseY.fraction)
 };
 
